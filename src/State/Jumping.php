@@ -2,7 +2,7 @@
 
 namespace StateGame\State;
 
-use StateGame\Guy;
+use StateGame\Elephpant;
 use StateGame\Input;
 
 class Jumping implements StateInterface
@@ -10,11 +10,11 @@ class Jumping implements StateInterface
     /**
      * {@inheritdoc}
      */
-    public function handle(Guy $guy, $input)
+    public function handle(Elephpant $Elephpant, $input)
     {
         switch ($input) {
             case Input::A_UP:
-                $guy->apply('run');
+                $Elephpant->apply('run');
                 break;
         }
     }

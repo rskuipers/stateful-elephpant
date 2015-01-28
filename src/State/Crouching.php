@@ -2,7 +2,7 @@
 
 namespace StateGame\State;
 
-use StateGame\Guy;
+use StateGame\Elephpant;
 use StateGame\Input;
 
 class Crouching implements StateInterface
@@ -10,11 +10,14 @@ class Crouching implements StateInterface
     /**
      * {@inheritdoc}
      */
-    public function handle(Guy $guy, $input)
+    public function handle(Elephpant $Elephpant, $input)
     {
         switch ($input) {
             case Input::B_UP:
-                $guy->apply('idle');
+                $Elephpant->apply('idle');
+                break;
+            case Input::A_UP:
+                $Elephpant->dump();
                 break;
         }
     }

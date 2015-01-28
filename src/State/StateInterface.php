@@ -2,13 +2,13 @@
 
 namespace StateGame\State;
 
-use StateGame\Guy;
+use StateGame\Elephpant;
 
 interface StateInterface
 {
     /**
-     * @param Guy $guy
+     * @param Elephpant $Elephpant
      * @param $input
      */
-    public function handle(Guy $guy, $input);
+    public function handle(Elephpant $Elephpant, $input);
 }

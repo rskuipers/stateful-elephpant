@@ -8,7 +8,7 @@ use StateGame\State\Jumping;
 use StateGame\State\Running;
 use StateGame\State\StateInterface;
 
-class Guy
+class Elephpant
 {
     /**
      * @var StateInterface
@@ -26,6 +26,11 @@ class Guy
     public function handle($input)
     {
         $this->state->handle($this, $input);
+    }
+
+    public function dump()
+    {
+        var_dump($this);
     }
 
     /**

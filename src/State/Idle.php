@@ -2,7 +2,7 @@
 
 namespace StateGame\State;
 
-use StateGame\Guy;
+use StateGame\Elephpant;
 use StateGame\Input;
 
 class Idle implements StateInterface
@@ -10,18 +10,18 @@ class Idle implements StateInterface
     /**
      * {@inheritdoc}
      */
-    public function handle(Guy $guy, $input)
+    public function handle(Elephpant $Elephpant, $input)
     {
         switch ($input) {
             case Input::RIGHT_DOWN:
             case Input::LEFT_DOWN:
-                $guy->apply('run');
+                $Elephpant->apply('run');
                 break;
             case Input::A_DOWN:
-                $guy->apply('jump');
+                $Elephpant->apply('jump');
                 break;
             case Input::B_DOWN:
-                $guy->apply('crouch');
+                $Elephpant->apply('crouch');
                 break;
         }
     }
