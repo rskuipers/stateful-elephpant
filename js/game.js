@@ -17,7 +17,9 @@ window.onload = function() {
 
         game.physics.startSystem(Phaser.Physics.ARCADE);
 
-        game.world.setBounds(0, 0, 800, 600);
+        game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
+        game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+        game.scale.pageAlignHorizontally = true;
 
         var sky = game.add.sprite(0, 0, 'sky');
         sky.fixedToCamera = true;
@@ -75,7 +77,7 @@ window.onload = function() {
             }
         } else {
             player.animations.stop();
-            player.frame = 1;
+            player.frame = 2;
 
             if (player.body.touching.down) {
                 state.text = 'idling';

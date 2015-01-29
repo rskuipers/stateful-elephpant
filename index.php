@@ -2,14 +2,14 @@
 
 require_once 'autoload.php';
 
-$guy = new \StateGame\Elephpant();
+$elephpant = new Elephpant();
 
-$guy->handle(\StateGame\Input::RIGHT_DOWN);
-$guy->handle(\StateGame\Input::SPACE_DOWN);
+$elephpant->handle(Input::RIGHT_DOWN);
+$elephpant->handle(Input::SPACE_DOWN);
 
-$guy->handle(\StateGame\Input::DOWN_DOWN);
+$elephpant->handle(Input::DOWN_DOWN);
 
-$guy->handle(\StateGame\Input::SPACE_UP);
-$guy->handle(\StateGame\Input::DOWN_DOWN);
+$elephpant->handle(Input::SPACE_UP);
+$elephpant->handle(Input::DOWN_DOWN);
 
-$guy->handle(\StateGame\Input::SPACE_UP);
+$elephpant->handle(Input::SPACE_UP);

@@ -1,8 +1,8 @@
 <?php
 
-namespace StateGame\State;
+namespace State;
 
-use StateGame\Elephpant;
+use Elephpant;
 
 interface StateInterface
 {

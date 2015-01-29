@@ -2,6 +2,5 @@
 
 spl_autoload_register(function ($class) {
     $tokens = explode('\\', $class);
-    $tokens[0] = 'src';
-    require_once implode('/', $tokens) . '.php';
+    require_once 'src/' . implode('/', $tokens) . '.php';
 });

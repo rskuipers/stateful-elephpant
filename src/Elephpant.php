@@ -1,12 +1,10 @@
 <?php
 
-namespace StateGame;
-
-use StateGame\State\Crouching;
-use StateGame\State\Idle;
-use StateGame\State\Jumping;
-use StateGame\State\Running;
-use StateGame\State\StateInterface;
+use State\Crouching;
+use State\Idle;
+use State\Jumping;
+use State\Running;
+use State\StateInterface;
 
 class Elephpant
 {

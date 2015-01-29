@@ -1,9 +1,9 @@
 <?php
 
-namespace StateGame\State;
+namespace State;
 
-use StateGame\Elephpant;
-use StateGame\Input;
+use Elephpant;
+use Input;
 
 class Crouching implements StateInterface
 {

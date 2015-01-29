@@ -1,7 +1,5 @@
 <?php
 
-namespace StateGame;
-
 class Input
 {
     const SPACE_DOWN    = 1;
