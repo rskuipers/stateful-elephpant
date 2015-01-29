@@ -5,17 +5,17 @@ using the state pattern.
 
 ## Game
 
-You can see the game here: https://rskuipers.github.com/stateful-elephpant
+You can see the game here: [https://rskuipers.github.com/stateful-elephpant](https://rskuipers.github.com/stateful-elephpant)
 
 ## Usage
 
 If you want to run the game locally, start a php service in the root of this project.
 
 ```sh
-$ php -S 0:8080 -t .
+$ php -S 0:8080
 ```
 
-And view the game here: http://localhost:8080/index.html
+And view the game here: [http://localhost:8080/index.html](http://localhost:8080/index.html)
 
 You can also execute the PHP equivalant.
 
