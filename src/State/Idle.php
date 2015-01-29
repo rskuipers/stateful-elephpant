@@ -17,10 +17,10 @@ class Idle implements StateInterface
             case Input::LEFT_DOWN:
                 $Elephpant->apply('run');
                 break;
-            case Input::A_DOWN:
+            case Input::SPACE_DOWN:
                 $Elephpant->apply('jump');
                 break;
-            case Input::B_DOWN:
+            case Input::DOWN_DOWN:
                 $Elephpant->apply('crouch');
                 break;
         }

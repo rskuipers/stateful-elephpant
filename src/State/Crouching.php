@@ -13,10 +13,10 @@ class Crouching implements StateInterface
     public function handle(Elephpant $Elephpant, $input)
     {
         switch ($input) {
-            case Input::B_UP:
+            case Input::DOWN_UP:
                 $Elephpant->apply('idle');
                 break;
-            case Input::A_UP:
+            case Input::SPACE_UP:
                 $Elephpant->dump();
                 break;
         }

@@ -13,10 +13,10 @@ class Running implements StateInterface
     public function handle(Elephpant $Elephpant, $input)
     {
         switch ($input) {
-            case Input::A_DOWN:
+            case Input::SPACE_DOWN:
                 $Elephpant->apply('jump');
                 break;
-            case Input::B_DOWN:
+            case Input::DOWN_DOWN:
                 $Elephpant->apply('crouch');
                 break;
         }

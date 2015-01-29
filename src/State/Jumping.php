@@ -13,7 +13,7 @@ class Jumping implements StateInterface
     public function handle(Elephpant $Elephpant, $input)
     {
         switch ($input) {
-            case Input::A_UP:
+            case Input::SPACE_UP:
                 $Elephpant->apply('run');
                 break;
         }

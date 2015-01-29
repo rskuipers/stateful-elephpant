@@ -45,12 +45,13 @@ window.onload = function() {
         player.animations.add('right', [0, 1, 2, 3, 4, 5], 20, true);
 
         state = game.add.text(0, 0, 'idling', bigStyle);
+
+        cursors = game.input.keyboard.createCursorKeys();
+        game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
     }
 
     function update() {
         game.physics.arcade.collide(player, platforms);
-
-        cursors = game.input.keyboard.createCursorKeys();
 
         player.body.velocity.x = 0;
 
@@ -81,7 +82,7 @@ window.onload = function() {
             }
         }
 
-        if (cursors.up.isDown && player.body.touching.down)
+        if (game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR) && player.body.touching.down)
         {
             player.body.velocity.y = -350;
             state.text = 'jumping';
@@ -94,7 +95,7 @@ window.onload = function() {
 
             state.text = 'crouching';
 
-            if (cursors.up.isDown) {
+            if (game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
                 var text = game.add.text(player.body.x, player.body.y + 60, 'var_dump($this);', normalStyle);
             }
         }
