@@ -7,8 +7,13 @@ use Elephpant;
 interface StateInterface
 {
     /**
-     * @param Elephpant $Elephpant
+     * @param Elephpant $elephpant
      * @param $input
      */
-    public function handle(Elephpant $Elephpant, $input);
+    public function handle(Elephpant $elephpant, $input);
+
+    /**
+     * @return string
+     */
+    public function getName();
 }

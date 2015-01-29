@@ -10,12 +10,20 @@ class Jumping implements StateInterface
     /**
      * {@inheritdoc}
      */
-    public function handle(Elephpant $Elephpant, $input)
+    public function handle(Elephpant $elephpant, $input)
     {
         switch ($input) {
             case Input::SPACE_UP:
-                $Elephpant->apply('run');
+                $elephpant->setState(new Running());
                 break;
         }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getName()
+    {
+        return 'jumping';
     }
 }

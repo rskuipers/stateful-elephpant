@@ -5,7 +5,7 @@ namespace State;
 use Elephpant;
 use Input;
 
-class Running implements StateInterface
+class Idling implements StateInterface
 {
     /**
      * {@inheritdoc}
@@ -13,6 +13,10 @@ class Running implements StateInterface
     public function handle(Elephpant $elephpant, $input)
     {
         switch ($input) {
+            case Input::RIGHT_DOWN:
+            case Input::LEFT_DOWN:
+                $elephpant->setState(new Running());
+                break;
             case Input::SPACE_DOWN:
                 $elephpant->setState(new Jumping());
                 break;
@@ -27,6 +31,6 @@ class Running implements StateInterface
      */
     public function getName()
     {
-        return 'running';
+        return 'idling';
     }
 }

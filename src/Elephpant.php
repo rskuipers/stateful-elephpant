@@ -1,9 +1,6 @@
 <?php
 
-use State\Crouching;
-use State\Idle;
-use State\Jumping;
-use State\Running;
+use State\Idling;
 use State\StateInterface;
 
 class Elephpant
@@ -15,7 +12,7 @@ class Elephpant
 
     public function __construct()
     {
-        $this->apply('idle');
+        $this->setState(new Idling());
     }
 
     /**
@@ -32,24 +29,11 @@ class Elephpant
     }
 
     /**
-     * @param $transition
+     * @param $state
      */
-    public function apply($transition)
+    public function setState(StateInterface $state)
     {
-        switch ($transition) {
-            case 'idle':
-                $this->state = new Idle();
-                break;
-            case 'run':
-                $this->state = new Running();
-                break;
-            case 'jump':
-                $this->state = new Jumping();
-                break;
-            case 'crouch':
-                $this->state = new Crouching();
-                break;
-        }
-        echo "Applied transition {$transition}\n";
+        $this->state = $state;
+        echo "Applied state {$state->getName()}\n";
     }
 }
