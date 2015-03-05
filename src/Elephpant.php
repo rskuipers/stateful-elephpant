@@ -20,6 +20,7 @@ class Elephpant
      */
     public function handle($input)
     {
+        echo "Handling {$input}\n";
         $this->state->handle($this, $input);
     }
 

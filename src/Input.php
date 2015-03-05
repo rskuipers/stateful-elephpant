@@ -2,12 +2,12 @@
 
 class Input
 {
-    const SPACE_DOWN    = 1;
-    const SPACE_UP      = 2;
-    const DOWN_DOWN     = 3;
-    const DOWN_UP       = 4;
-    const RIGHT_DOWN    = 5;
-    const RIGHT_UP      = 6;
-    const LEFT_DOWN     = 7;
-    const LEFT_UP       = 8;
+    const SPACE_DOWN    = 'SPACE_DOWN';
+    const SPACE_UP      = 'SPACE_UP';
+    const DOWN_DOWN     = 'DOWN_DOWN';
+    const DOWN_UP       = 'DOWN_UP';
+    const RIGHT_DOWN    = 'RIGHT_DOWN';
+    const RIGHT_UP      = 'RIGHT_UP';
+    const LEFT_DOWN     = 'LEFT_DOWN';
+    const LEFT_UP       = 'LEFT_UP';
 }
