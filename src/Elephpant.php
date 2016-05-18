@@ -1,26 +1,25 @@
 <?php
 
-use State\Idling;
-use State\StateInterface;
+use States\Idling;
+use States\State;
 
 class Elephpant
 {
     /**
-     * @var StateInterface
+     * @var State
      */
     public $state;
 
     public function __construct()
     {
-        $this->setState(new Idling());
+        $this->transitionTo(new Idling());
     }
 
     /**
-     * @param $input
+     * @param string $input
      */
     public function handle($input)
     {
-        echo "Handling {$input}\n";
         $this->state->handle($this, $input);
     }
 
@@ -30,11 +29,11 @@ class Elephpant
     }
 
     /**
-     * @param $state
+     * @param State $state
      */
-    public function setState(StateInterface $state)
+    public function transitionTo(State $state)
     {
         $this->state = $state;
-        echo "Applied state {$state->getName()}\n";
+        echo 'Applied ' . get_class($state) . PHP_EOL;
     }
 }

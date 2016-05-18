@@ -1,36 +1,29 @@
 <?php
 
-namespace State;
+namespace States;
 
 use Elephpant;
 use Input;
 
-class Idling implements StateInterface
+class Idling implements State
 {
     /**
-     * {@inheritdoc}
+     * @param Elephpant $elephpant
+     * @param string $input
      */
     public function handle(Elephpant $elephpant, $input)
     {
         switch ($input) {
             case Input::RIGHT_DOWN:
             case Input::LEFT_DOWN:
-                $elephpant->setState(new Running());
+                $elephpant->transitionTo(new Running());
                 break;
             case Input::SPACE_DOWN:
-                $elephpant->setState(new Jumping());
+                $elephpant->transitionTo(new Jumping());
                 break;
             case Input::DOWN_DOWN:
-                $elephpant->setState(new Crouching());
+                $elephpant->transitionTo(new Crouching());
                 break;
         }
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
-    {
-        return 'idling';
     }
 }

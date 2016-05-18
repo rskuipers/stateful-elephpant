@@ -1,32 +1,25 @@
 <?php
 
-namespace State;
+namespace States;
 
 use Elephpant;
 use Input;
 
-class Crouching implements StateInterface
+class Crouching implements State
 {
     /**
-     * {@inheritdoc}
+     * @param Elephpant $elephpant
+     * @param string $input
      */
     public function handle(Elephpant $elephpant, $input)
     {
         switch ($input) {
             case Input::DOWN_UP:
-                $elephpant->setState(new Idling());
+                $elephpant->transitionTo(new Idling());
                 break;
             case Input::SPACE_UP:
                 $elephpant->dump();
                 break;
         }
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
-    {
-        return 'crouching';
     }
 }

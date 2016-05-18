@@ -1,19 +1,14 @@
 <?php
 
-namespace State;
+namespace States;
 
 use Elephpant;
 
-interface StateInterface
+interface State
 {
     /**
      * @param Elephpant $elephpant
-     * @param $input
+     * @param string $input
      */
     public function handle(Elephpant $elephpant, $input);
-
-    /**
-     * @return string
-     */
-    public function getName();
 }

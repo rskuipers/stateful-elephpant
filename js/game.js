@@ -84,8 +84,7 @@ window.onload = function() {
             }
         }
 
-        if (game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR) && player.body.touching.down)
-        {
+        if (game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR) && player.body.touching.down) {
             player.body.velocity.y = -350;
             state.text = 'jumping';
         }
