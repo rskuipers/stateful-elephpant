@@ -20,6 +20,9 @@ class Running implements State
             case Input::DOWN_DOWN:
                 $elephpant->transitionTo(new Crouching());
                 break;
+            case Input::SPACE_UP:
+                $elephpant->shoot();
+                break;
         }
     }
 }

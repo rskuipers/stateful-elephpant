@@ -23,9 +23,9 @@ class Elephpant
         $this->state->handle($this, $input);
     }
 
-    public function dump()
+    public function shoot()
     {
-        var_dump($this);
+        echo self::class . ' shoots a fireball' . PHP_EOL;
     }
 
     /**

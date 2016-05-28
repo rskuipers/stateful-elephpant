@@ -17,9 +17,6 @@ class Crouching implements State
             case Input::DOWN_UP:
                 $elephpant->transitionTo(new Idling());
                 break;
-            case Input::SPACE_UP:
-                $elephpant->dump();
-                break;
         }
     }
 }

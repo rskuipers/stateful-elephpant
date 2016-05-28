@@ -10,4 +10,6 @@ class Input
     const RIGHT_UP      = 'RIGHT_UP';
     const LEFT_DOWN     = 'LEFT_DOWN';
     const LEFT_UP       = 'LEFT_UP';
+    const UP_DOWN       = 'UP_DOWN';
+    const UP_UP         = 'UP_UP';
 }

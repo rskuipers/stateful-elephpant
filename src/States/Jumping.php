@@ -14,7 +14,7 @@ class Jumping implements State
     public function handle(Elephpant $elephpant, $input)
     {
         switch ($input) {
-            case Input::SPACE_UP:
+            case Input::UP_UP:
                 $elephpant->transitionTo(new Running());
                 break;
         }

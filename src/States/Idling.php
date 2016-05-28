@@ -18,11 +18,14 @@ class Idling implements State
             case Input::LEFT_DOWN:
                 $elephpant->transitionTo(new Running());
                 break;
-            case Input::SPACE_DOWN:
+            case Input::UP_DOWN:
                 $elephpant->transitionTo(new Jumping());
                 break;
             case Input::DOWN_DOWN:
                 $elephpant->transitionTo(new Crouching());
+                break;
+            case Input::SPACE_UP:
+                $elephpant->shoot();
                 break;
         }
     }
